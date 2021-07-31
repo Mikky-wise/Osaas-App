@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Osaas-App",
+    "slug": "Osaas-App",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Osaas-App"
+}
