@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {View, Text, TouchableHighlight} from 'react-native';
 
-export default function ModalCard(props) {
+export default function OrderDetails(props) {
 
     const [counter,
         setcounter] = useState(0)
@@ -12,7 +12,7 @@ export default function ModalCard(props) {
             alignSelf: "center",
             marginTop: '50%',
             backgroundColor: "#FFF",
-            height: '39%',
+            height: '37%',
             elevation: 1,
             width: '80%',
             borderRadius: 15,
@@ -255,35 +255,37 @@ export default function ModalCard(props) {
                 </View>
             </View>
 
-            <View
+            <TouchableHighlight
+                underlayColor="#6C63FF"
+                onPress={() => setcounter(counter + 1)}
                 style={{
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-                alignItems: 'flex-start'
+                width: 200,
+                marginLeft: 5,
+                elevation: 2,
+                marginTop: 25,
+                backgroundColor: "#6C63FF",
+                paddingVertical: 13,
+                borderRadius: 25,
+                alignSelf: "center"
             }}>
-                <View style={{
-                    width: '50%'
+                <Text
+                    style={{
+                    color: "#FFF",
+                    textAlign: "center",
+                    fontSize: 18
                 }}>
-                    <Text
-                        style={{
-                        color: "#4b3ca7",
-                        fontSize: 16
-                    }}>
-                        Status:
-                    </Text>
-                </View>
-                <View style={{
-                    width: '50%'
-                }}>
-                    <Text
-                        style={{
-                        color: "#4b3ca7",
-                        fontSize: 16
-                    }}>
-                        Completed
-                    </Text>
-                </View>
-            </View>
+                    {(() => {
+                        if (counter % 3 == 0) {
+                            return ("Start Ride")
+                        } else if (counter % 3 == 1) {
+                            return ("Reached")
+                        } else if (counter % 3 == 2) {
+                            return ("Mark as delivered")
+                        }
+                    })()}
+
+                </Text>
+            </TouchableHighlight>
 
             <TouchableHighlight
                 underlayColor="#6C63FF"
@@ -292,7 +294,7 @@ export default function ModalCard(props) {
                 width: 200,
                 marginLeft: 5,
                 elevation: 2,
-                marginTop: 25,
+                marginTop: 5,
                 backgroundColor: "#6C63FF",
                 paddingVertical: 13,
                 borderRadius: 25,

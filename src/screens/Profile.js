@@ -1,9 +1,13 @@
-import React from 'react'
-import {ImageBackground, View, Image, Text, TextInput} from 'react-native'
+import React, {useState} from 'react'
+import {ImageBackground, View, Modal, Text, TouchableOpacity} from 'react-native'
 
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
+import {ScrollView} from 'react-native-gesture-handler';
+import ProfileUpdate from '../components/ProfileUpdate';
 
 const Profile = () => {
+    const [modal,
+        setmodal] = useState(false)
     return (
         <ImageBackground
             source={require("../images/back2.png")}
@@ -11,189 +15,494 @@ const Profile = () => {
             height: "100%",
             width: "100%"
         }}>
-            <View
-                style={{
-                width: "100%",
-                marginTop: 50,
-                marginBottom: 20,
-                justifyContent: "center",
-                alignItems: "center"
-            }}>
+            <ScrollView style={modal
+                ? {
+                    height: "100%",
+                    width: "100%",
+                    opacity: 0.2
+                }
+                : {
+                    height: "100%",
+                    width: "100%"
+                }}>
                 <View
                     style={{
-                    width: 80,
-                    height: 80,
-                    borderRadius: 50,
-                    backgroundColor: "#5facdb",
+                    width: "100%",
+                    marginTop: 50,
+                    marginBottom: 20,
                     justifyContent: "center",
                     alignItems: "center"
                 }}>
-                    <Icon
-                        name="account-circle-outline"
-                        size={32}
-                        color="#fff"
+                    <View
                         style={{
-                        height: 33,
-                        width: 33
-                    }}/>
+                        width: 80,
+                        height: 80,
+                        borderRadius: 50,
+                        backgroundColor: "#5facdb",
+                        justifyContent: "center",
+                        alignItems: "center"
+                    }}>
+                        <Icon
+                            name="account-circle-outline"
+                            size={32}
+                            color="#fff"
+                            style={{
+                            height: 33,
+                            width: 33
+                        }}/>
 
+                    </View>
                 </View>
-            </View>
-            <View style={{
-                height: "100%"
-            }}>
+                <View style={{
+                    height: "100%"
+                }}>
 
-                <Text
-                    style={{
-                    fontSize: 30,
-                    color: "#fff",
-                    alignSelf: "center"
-                }}>Agent Name</Text>
-
-                <Text
-                    style={{
-                    marginHorizontal: 55,
-                    color: "#fff",
-                    textAlign: 'center',
-                    marginTop: 5,
-                    opacity: 0.9
-                }}>
-                    OSAAS - The best way to deliver.
-                </Text>
-                <Text
-                    style={{
-                    marginHorizontal: 55,
-                    textAlign: 'center',
-                    marginTop: 15,
-                    color: "#fff",
-                    opacity: 0.8
-                }}>
-                    A breif tagline choosen by Agent about themselves, or some placeholder text.
-                </Text>
-                <View
-                    style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginHorizontal: 55,
-                    borderWidth: 2,
-                    marginTop: '28%',
-                    paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="pencil-outline" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Agent Name"
+                    <Text
                         style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                        fontSize: 30,
+                        color: "#fff",
+                        alignSelf: "center"
+                    }}>Agent Name</Text>
 
-                <View
-                    style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginHorizontal: 55,
-                    borderWidth: 2,
-                    marginTop: '2%',
-                    paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="cellphone-iphone" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Contact Number"
+                    <Text
                         style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
-
-                <View
-                    style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginHorizontal: 55,
-                    borderWidth: 2,
-                    marginTop: '2%',
-                    paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="cake" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Data of birth"
+                        marginHorizontal: 55,
+                        color: "#fff",
+                        textAlign: 'center',
+                        marginTop: 5,
+                        opacity: 0.9
+                    }}>
+                        OSAAS - The best way to deliver.
+                    </Text>
+                    <Text
                         style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                        marginHorizontal: 55,
+                        textAlign: 'center',
+                        marginTop: 15,
+                        color: "#fff",
+                        opacity: 0.8
+                    }}>
+                        A breif tagline choosen by Agent about themselves, or some placeholder text.
+                    </Text>
 
-                <View
-                    style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginHorizontal: 55,
-                    borderWidth: 2,
-                    marginTop: '2%',
-                    paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="mail" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Email"
+                    <TouchableOpacity
                         style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                        paddingHorizontal: 32,
+                        alignSelf: "center",
+                        marginTop: 20,
+                        backgroundColor: "#FFF",
+                        paddingBottom: 15,
+                        elevation: 1,
+                        width: '85%',
+                        height: '52%',
+                        borderRadius: 15,
+                        shadowColor: "#000000",
+                        shadowOpacity: 0.4,
+                        shadowRadius: 2,
+                        shadowOffset: {
+                            height: 1,
+                            width: 1
+                        }
+                    }}>
 
-                <View
-                    style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    marginHorizontal: 55,
-                    borderWidth: 2,
-                    marginTop: '2%',
-                    paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2,
-                    height: "10%"
-                }}>
-                    <Icon name="google-maps" color="#6C63FF" size={24}/>
-                    <TextInput
-                        multiline={true}
-                        numberOfLines={4}
-                        placeholder="Address"
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Name :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    John Doe
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Contact :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    XXX XXXX XXX
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Email :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    email@email.com
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    DOB :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    XX/XX/XXXX
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Gender :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Male
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Blood group :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    AB +ve
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Total Earned :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    $ 1000
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Month's earning :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    $ 400
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Total Trips :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    16
+                                </Text>
+                            </View>
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: 'row',
+                            flexWrap: 'wrap',
+                            alignItems: 'flex-start',
+                            marginTop: 8
+                        }}>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    Trips this month :
+                                </Text>
+                            </View>
+                            <View
+                                style={{
+                                width: '50%'
+                            }}>
+                                <Text
+                                    style={{
+                                    color: "#4b3ca7",
+                                    fontSize: 16
+                                }}>
+                                    8
+                                </Text>
+                            </View>
+                        </View>
+                        <View
+                            style={{
+                            flexDirection: "row",
+                            marginTop: 15,
+                            alignItems: "center"
+                        }}>
+                            <Text
+                                style={{
+                                color: "#a2a2db",
+                                fontSize: 12
+                            }}>
+                                Address
+                            </Text>
+
+                        </View>
+
+                        <View
+                            style={{
+                            flexDirection: "row",
+                            alignItems: "center"
+                        }}>
+                            <Text
+                                style={{
+                                color: "#4b3ca7",
+                                fontSize: 16
+                            }}>
+                                Address Line 1,{"\n"}
+                                Address Line 2,{"\n"}
+                                City Name, Pin Code
+                            </Text>
+
+                        </View>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        underlayColor="#6C63FF"
+                        onPress={() => {
+                            setmodal(!modal);
+                        }}
                         style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                        width: 200,
+                        marginLeft: 5,
+                        elevation: 2,
+                        marginTop: 8,
+                        backgroundColor: "#6C63FF",
+                        paddingVertical: 10,
+                        borderRadius: 25,
+                        alignSelf: "center"
+                    }}>
+                        <Text
+                            style={{
+                            color: "#FFF",
+                            textAlign: "center",
+                            fontSize: 18
+                        }}>
+                            Update Profile
+                        </Text>
+                    </TouchableOpacity>
 
-                <View
-                    style={{
-                    marginHorizontal: 55,
-                    alignItems: "center",
-                    justifyContent: "center",
-                    marginTop: 30,
-                    backgroundColor: "#6C63FF",
-                    paddingVertical: 10,
-                    borderRadius: 23
-                }}>
-                    <Text style={{
-                        color: "white"
-                    }}>Update Profile</Text>
                 </View>
-
-            </View>
+            </ScrollView>
+            <View>
+                    <Modal animationType="slide" transparent={true} visible={modal}>
+                        <ProfileUpdate
+                            onPress={() => {
+                            setmodal(!modal);
+                        }}/>
+                    </Modal>
+                </View>
         </ImageBackground>
     )
 }

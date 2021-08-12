@@ -1,138 +1,195 @@
-import React, {useState} from 'react'
-import {View, Text, TouchableOpacity} from 'react-native'
+import React from "react";
+import {View, Text, TouchableOpacity} from "react-native";
+import {FontAwesome5} from '@expo/vector-icons';
 
-const HistoryCard = (props) => {
-
+export default function HistoryCard(props) {
     return (
         <TouchableOpacity
-            onPress={props.onPress}
             style={{
             paddingHorizontal: 32,
             alignSelf: "center",
             marginTop: 20,
             backgroundColor: "#FFF",
-            height: '32%',
+            paddingBottom: 15,
             elevation: 1,
-            width: '90%',
-            borderRadius: 15
-        }}>
+            width: '85%',
+            borderRadius: 15,
+            shadowColor: "#000000",
+            shadowOpacity: 0.4,
+            shadowRadius: 2,
+            shadowOffset: {
+                height: 1,
+                width: 1
+            }
+        }}
+            onPress={props.onPress}>
+
+            
+
             <View
                 style={{
-                flexDirection: "row",
-                paddingTop: 20,
-                alignSelf: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+                marginTop: 8
             }}>
-                <Text
-                    style={{
-                    color: "#4b3ca7",
-                    fontSize: 20
+                
+                <View style={{
+                    width: '50%'
                 }}>
-                    NYC
-                </Text>
-
-                <Text
-                    style={{
-                    fontSize: 20,
-                    color: "#a2a2db",
-                    paddingHorizontal: 14
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 20
+                    }}>
+                        New York
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    {" "}
-                    - - - - - - - - - - {" "}
-                </Text>
-                <Text
-                    style={{
-                    color: "#4b3ca7",
-                    fontSize: 20
-                }}>
-                    IDN
-                </Text>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 20
+                    }}>
+                        Washington
+                    </Text>
+                </View>
             </View>
 
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: -5,
-                alignItems: "center",
-                alignSelf: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start'
             }}>
-                <Text
-                    style={{
-                    color: "#a2a2db",
-                    fontSize: 11
+                <View style={{
+                    width: '50%'
                 }}>
-                    New York
-                </Text>
-                <Text
-                    style={{
-                    fontSize: 11,
-                    color: "#a2a2db",
-                    paddingLeft: '44%'
+                    <Text
+                        style={{
+                        color: "#a2a2db",
+                        fontSize: 12
+                    }}>
+                        12:00 PM
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    Washington
-                </Text>
+                    <Text
+                        style={{
+                        color: "#a2a2db",
+                        fontSize: 12
+                    }}>
+                        ETA: 50 mins
+                    </Text>
+                </View>
             </View>
 
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center",
-                justifyContent: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+                marginTop: 8
             }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
+                <View style={{
+                    width: '50%'
                 }}>
-                    09:00 AM
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#a2a2db",
-                    fontSize: 12,
-                    paddingLeft: '44%'
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        Name :
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    20 June, 2021
-                </Text>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        John Doe
+                    </Text>
+                </View>
             </View>
-
-            <Text
-                style={{
-                fontSize: 17,
-                marginRight: -5,
-                marginVertical: 8,
-                color: "#a2a2db",
-                alignSelf: "center"
-            }}>
-                - - - - - - - - - - - - - - - - - - - - - - -
-            </Text>
 
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: -8,
-                alignItems: "center",
-                justifyContent: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+                marginTop: 8
             }}>
+                <View style={{
+                    width: '50%'
+                }}>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        Contact :
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
+                }}>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        XXX XXXX XXX
+                    </Text>
+                </View>
+            </View>
+
+            <View style={{}}>
                 <Text
                     style={{
-                    color: "#522289",
-                    fontSize: 16
+                    fontSize: 17,
+                    marginRight: -5,
+                    color: "#a2a2db"
                 }}>
-                    Total Amount
-                </Text>
-                <Text
-                    style={{
-                    color: "#4b3ca7",
-                    paddingLeft: "40%",
-                    fontSize: 16
-                }}>
-                    $400
+                    - - - - - - - - - - - - - - - - - - - - - - -
                 </Text>
             </View>
+            <View
+                style={{
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start'
+            }}>
+                <View style={{
+                    width: '50%'
+                }}>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        Total Fare :
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
+                }}>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        $ 400
+                    </Text>
+                </View>
+            </View>
+
         </TouchableOpacity>
     )
 }
-
-export default HistoryCard

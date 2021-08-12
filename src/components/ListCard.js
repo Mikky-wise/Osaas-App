@@ -1,7 +1,8 @@
 import React from "react";
 import {View, Text, TouchableOpacity} from "react-native";
+import {FontAwesome5} from '@expo/vector-icons';
 
-export default function ListCard({navigation}) {
+export default function ListCard(props) {
     return (
         <TouchableOpacity
             style={{
@@ -12,194 +13,141 @@ export default function ListCard({navigation}) {
             paddingBottom: 15,
             elevation: 1,
             width: '85%',
-            borderRadius: 15
-        }}>
-            <View
-                style={{
-                flexDirection: "row",
-                paddingTop: 20
-            }}>
-                <Text
-                    style={{
-                    color: "#4b3ca7",
-                    fontSize: 20
-                }}>
-                    Things to Pickup
-                </Text>
+            borderRadius: 15,
+            shadowColor: "#000000",
+            shadowOpacity: 0.4,
+            shadowRadius: 2,
+            shadowOffset: {
+                height: 1,
+                width: 1
+            }
+        }}
+            onPress={props.onPress}>
 
-            </View>
-
-            <Text
-                style={{
-                color: "#a2a2db",
-                fontSize: 12
-            }}>
-                20'June, 2021
-            </Text>
+            
 
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+                marginTop: 8
             }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
+                
+                <View style={{
+                    width: '50%'
                 }}>
-                    Item - 1
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#522289",
-                    paddingLeft: "60%",
-                    fontSize: 16
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 20
+                    }}>
+                        New York
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    x 3
-                </Text>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 20
+                    }}>
+                        Washington
+                    </Text>
+                </View>
             </View>
 
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start'
             }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
+                <View style={{
+                    width: '50%'
                 }}>
-                    Item - 2
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#522289",
-                    paddingLeft: "60%",
-                    fontSize: 16
+                    <Text
+                        style={{
+                        color: "#a2a2db",
+                        fontSize: 12
+                    }}>
+                        12:00 PM
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    x 6
-                </Text>
-            </View>
-            <View
-                style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center"
-            }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
-                }}>
-                    Item - 3
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#522289",
-                    paddingLeft: "60%",
-                    fontSize: 16
-                }}>
-                    x 6
-                </Text>
-            </View>
-            <View
-                style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center"
-            }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
-                }}>
-                    Item - 4
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#522289",
-                    paddingLeft: "60%",
-                    fontSize: 16
-                }}>
-                    x 6
-                </Text>
-            </View>
-            <View
-                style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center"
-            }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
-                }}>
-                    Item - 5
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#522289",
-                    paddingLeft: "60%",
-                    fontSize: 16
-                }}>
-                    x 6
-                </Text>
+                    <Text
+                        style={{
+                        color: "#a2a2db",
+                        fontSize: 12
+                    }}>
+                        ETA: 50 mins
+                    </Text>
+                </View>
             </View>
 
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+                marginTop: 8
             }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
+                <View style={{
+                    width: '50%'
                 }}>
-                    Item - 6
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#522289",
-                    paddingLeft: "60%",
-                    fontSize: 16
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        Name :
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    x 6
-                </Text>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        John Doe
+                    </Text>
+                </View>
             </View>
 
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: 10,
-                alignItems: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+                marginTop: 8
             }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
+                <View style={{
+                    width: '50%'
                 }}>
-                    Item - 7
-                </Text>
-
-                <Text
-                    style={{
-                    color: "#522289",
-                    paddingLeft: "60%",
-                    fontSize: 16
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        Contact :
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    x 6
-                </Text>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        XXX XXXX XXX
+                    </Text>
+                </View>
             </View>
 
             <View style={{}}>
@@ -207,35 +155,41 @@ export default function ListCard({navigation}) {
                     style={{
                     fontSize: 17,
                     marginRight: -5,
-                    marginVertical: 8,
                     color: "#a2a2db"
                 }}>
                     - - - - - - - - - - - - - - - - - - - - - - -
                 </Text>
             </View>
-
             <View
                 style={{
-                flexDirection: "row",
-                marginTop: -8,
-                alignItems: "center"
+                flexDirection: 'row',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start'
             }}>
-                <Text
-                    style={{
-                    color: "#522289",
-                    fontSize: 16
+                <View style={{
+                    width: '50%'
                 }}>
-                    Total Cost
-                </Text>
-                <Text
-                    style={{
-                    color: "#4b3ca7",
-                    paddingLeft: "50%",
-                    fontSize: 16
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        Total Fare :
+                    </Text>
+                </View>
+                <View style={{
+                    width: '50%'
                 }}>
-                    $400
-                </Text>
+                    <Text
+                        style={{
+                        color: "#4b3ca7",
+                        fontSize: 16
+                    }}>
+                        $ 400
+                    </Text>
+                </View>
             </View>
+
         </TouchableOpacity>
     )
 }

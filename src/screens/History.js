@@ -26,8 +26,25 @@ export default function History() {
             <ScrollView
                 showsVerticalScrollIndicator={false}
                 style={{
-                marginVertical: 5
+                marginVertical: 5,
+                height: "100%",
             }}>
+                <HistoryCard
+                    onPress={() => {
+                    setmodal(!modal);
+                }}/>
+                <HistoryCard
+                    onPress={() => {
+                    setmodal(!modal);
+                }}/>
+                <HistoryCard
+                    onPress={() => {
+                    setmodal(!modal);
+                }}/>
+                <HistoryCard
+                    onPress={() => {
+                    setmodal(!modal);
+                }}/>
                 <HistoryCard
                     onPress={() => {
                     setmodal(!modal);
