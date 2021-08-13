@@ -105,38 +105,7 @@ const Profile = () => {
                         }
                     }}>
 
-                        <View
-                            style={{
-                            flexDirection: 'row',
-                            flexWrap: 'wrap',
-                            alignItems: 'flex-start',
-                            marginTop: 8
-                        }}>
-                            <View
-                                style={{
-                                width: '50%'
-                            }}>
-                                <Text
-                                    style={{
-                                    color: "#4b3ca7",
-                                    fontSize: 16
-                                }}>
-                                    Name :
-                                </Text>
-                            </View>
-                            <View
-                                style={{
-                                width: '50%'
-                            }}>
-                                <Text
-                                    style={{
-                                    color: "#4b3ca7",
-                                    fontSize: 16
-                                }}>
-                                    John Doe
-                                </Text>
-                            </View>
-                        </View>
+                        
 
                         <View
                             style={{
@@ -266,39 +235,6 @@ const Profile = () => {
                                     fontSize: 16
                                 }}>
                                     Male
-                                </Text>
-                            </View>
-                        </View>
-
-                        <View
-                            style={{
-                            flexDirection: 'row',
-                            flexWrap: 'wrap',
-                            alignItems: 'flex-start',
-                            marginTop: 8
-                        }}>
-                            <View
-                                style={{
-                                width: '50%'
-                            }}>
-                                <Text
-                                    style={{
-                                    color: "#4b3ca7",
-                                    fontSize: 16
-                                }}>
-                                    Blood group :
-                                </Text>
-                            </View>
-                            <View
-                                style={{
-                                width: '50%'
-                            }}>
-                                <Text
-                                    style={{
-                                    color: "#4b3ca7",
-                                    fontSize: 16
-                                }}>
-                                    AB +ve
                                 </Text>
                             </View>
                         </View>

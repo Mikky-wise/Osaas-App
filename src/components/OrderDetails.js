@@ -275,11 +275,13 @@ export default function OrderDetails(props) {
                     fontSize: 18
                 }}>
                     {(() => {
-                        if (counter % 3 == 0) {
-                            return ("Start Ride")
-                        } else if (counter % 3 == 1) {
-                            return ("Reached")
-                        } else if (counter % 3 == 2) {
+                        if (counter % 4 == 0) {
+                            return ("Go to pickup")
+                        } else if (counter % 4 == 1) {
+                            return ("Item(s) Picked Up")
+                        } else if (counter % 4 == 2) {
+                            return ("Head to delivery")
+                        } else if(counter % 4 == 3){
                             return ("Mark as delivered")
                         }
                     })()}

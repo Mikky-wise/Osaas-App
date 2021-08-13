@@ -35,8 +35,7 @@ export default function ProfileUpdate(props) {
                 paddingHorizontal: 10,
                 borderColor: "#6C63FF",
                 borderRadius: 23,
-                paddingVertical: 2,
-                
+                paddingVertical: 2
             }}>
                 <Icon name="pencil-outline" color="#6C63FF" size={24}/>
                 <TextInput
@@ -48,127 +47,107 @@ export default function ProfileUpdate(props) {
             </View>
 
             <View
+                style={{
+                flexDirection: "row",
+                alignItems: "center",
+                borderWidth: 2,
+                marginTop: '2%',
+                paddingHorizontal: 10,
+                borderColor: "#6C63FF",
+                borderRadius: 23,
+                paddingVertical: 2
+            }}>
+                <Icon name="cellphone-iphone" color="#6C63FF" size={24}/>
+                <TextInput
+                    placeholder="Contact Number"
                     style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    borderWidth: 2,
-                    marginTop: '2%',
                     paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="cellphone-iphone" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Contact Number"
-                        style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                    width: "90%"
+                }}/>
+            </View>
 
-                <View
+            <View
+                style={{
+                flexDirection: "row",
+                alignItems: "center",
+                borderWidth: 2,
+                marginTop: '2%',
+                paddingHorizontal: 10,
+                borderColor: "#6C63FF",
+                borderRadius: 23,
+                paddingVertical: 2
+            }}>
+                <Icon name="cake" color="#6C63FF" size={24}/>
+                <TextInput
+                    placeholder="Data of birth"
                     style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    borderWidth: 2,
-                    marginTop: '2%',
                     paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="cake" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Data of birth"
-                        style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                    width: "90%"
+                }}/>
+            </View>
 
-                <View
+            <View
+                style={{
+                flexDirection: "row",
+                alignItems: "center",
+                borderWidth: 2,
+                marginTop: '2%',
+                paddingHorizontal: 10,
+                borderColor: "#6C63FF",
+                borderRadius: 23,
+                paddingVertical: 2
+            }}>
+                <Icon name="mail" color="#6C63FF" size={24}/>
+                <TextInput
+                    placeholder="Email"
                     style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    borderWidth: 2,
-                    marginTop: '2%',
                     paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="mail" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Email"
-                        style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                    width: "90%"
+                }}/>
+            </View>
 
-                <View
+            <View
+                style={{
+                flexDirection: "row",
+                alignItems: "center",
+                borderWidth: 2,
+                marginTop: '2%',
+                paddingHorizontal: 10,
+                borderColor: "#6C63FF",
+                borderRadius: 23,
+                paddingVertical: 2
+            }}>
+                <Icon name="nature-people" color="#6C63FF" size={24}/>
+                <TextInput
+                    placeholder="Gender"
                     style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    borderWidth: 2,
-                    marginTop: '2%',
                     paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="nature-people" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Gender"
-                        style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                    width: "90%"
+                }}/>
+            </View>
 
-                <View
+            <View
+                style={{
+                flexDirection: "row",
+                alignItems: "center",
+                borderWidth: 2,
+                marginTop: '2%',
+                paddingHorizontal: 10,
+                borderColor: "#6C63FF",
+                borderRadius: 23,
+                paddingVertical: 2,
+                height: "10%"
+            }}>
+                <Icon name="google-maps" color="#6C63FF" size={24}/>
+                <TextInput
+                    multiline={true}
+                    numberOfLines={4}
+                    placeholder="Address"
                     style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    borderWidth: 2,
-                    marginTop: '2%',
                     paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2
-                }}>
-                    <Icon name="blood-bag" color="#6C63FF" size={24}/>
-                    <TextInput
-                        placeholder="Blood Group"
-                        style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
-
-                <View
-                    style={{
-                    flexDirection: "row",
-                    alignItems: "center",
-                    borderWidth: 2,
-                    marginTop: '2%',
-                    paddingHorizontal: 10,
-                    borderColor: "#6C63FF",
-                    borderRadius: 23,
-                    paddingVertical: 2,
-                    height: "10%"
-                }}>
-                    <Icon name="google-maps" color="#6C63FF" size={24}/>
-                    <TextInput
-                        multiline={true}
-                        numberOfLines={4}
-                        placeholder="Address"
-                        style={{
-                        paddingHorizontal: 10,
-                        width: "90%"
-                    }}/>
-                </View>
+                    width: "90%"
+                }}/>
+            </View>
 
             <TouchableHighlight
                 underlayColor="#6C63FF"
